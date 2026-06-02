@@ -22,7 +22,3 @@
 ```bash
 npx serve .
 ```
-
-## 发布到 GitHub
-
-这是一个纯静态项目，适合直接发布到 GitHub Pages。仓库创建后，把这些文件提交到主分支，再在 GitHub Pages 中选择根目录部署即可。
