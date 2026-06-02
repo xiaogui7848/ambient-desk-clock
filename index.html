@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A calm desktop ambient clock for focus sessions." />
+    <title>Ambient Desk Clock</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="aurora">
+    <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main class="clock-shell" aria-label="桌面氛围时钟">
+      <section class="clock-stage">
+        <p class="eyebrow" id="greeting">晚上好</p>
+        <h1 class="time" id="time">00:00</h1>
+        <p class="date" id="date">2026 年 6 月 2 日 星期二</p>
+        <p class="quote" id="quote">把注意力轻轻放回此刻。</p>
+      </section>
+
+      <section class="dock" aria-label="时钟控制">
+        <div class="theme-group" role="group" aria-label="氛围主题">
+          <button class="theme-button active" type="button" data-theme-value="aurora" aria-label="切换到极光主题">
+            <span class="swatch aurora"></span>
+            <span>极光</span>
+          </button>
+          <button class="theme-button" type="button" data-theme-value="dawn" aria-label="切换到晨光主题">
+            <span class="swatch dawn"></span>
+            <span>晨光</span>
+          </button>
+          <button class="theme-button" type="button" data-theme-value="midnight" aria-label="切换到午夜主题">
+            <span class="swatch midnight"></span>
+            <span>午夜</span>
+          </button>
+          <button class="theme-button" type="button" data-theme-value="forest" aria-label="切换到森林主题">
+            <span class="swatch forest"></span>
+            <span>森林</span>
+          </button>
+        </div>
+
+        <div class="actions" role="group" aria-label="显示设置">
+          <button class="icon-button" id="format-toggle" type="button" aria-label="切换 12/24 小时制" title="切换 12/24 小时制">
+            24
+          </button>
+          <button class="icon-button" id="seconds-toggle" type="button" aria-label="显示或隐藏秒数" title="显示或隐藏秒数">
+            :秒
+          </button>
+          <button class="icon-button" id="sound-toggle" type="button" aria-label="开启或关闭氛围音" title="开启或关闭氛围音">
+            音
+          </button>
+          <button class="icon-button" id="fullscreen-toggle" type="button" aria-label="进入或退出全屏" title="进入或退出全屏">
+            ⛶
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
